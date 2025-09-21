@@ -18,4 +18,19 @@
 | fey kloss|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 
 
-**Lấy 10 hàng đầu tiên từ bảng**
+**Create a new table for cleaning**
+
+1. Copy the table
+CREATE TABLE club_member_info_cleaned (
+	full_name VARCHAR(50),
+	age INTEGER,
+	martial_status VARCHAR(50),
+	email VARCHAR(50),
+	phone NVARCHAR(50),
+	full_address NVARCHAR(50),
+	job_title VARCHAR(50),
+	membership_date NVARCHAR(50)
+);
+2. Copy all values from original table
+INSERT INTO club_member_info_cleaned
+SELECT * FROM club_member_info
